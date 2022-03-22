@@ -27,7 +27,7 @@ energydata <- energydatafull %>%
 
 ##Plot 3 - Sub_metering by DateTime
 png(filename = "Plot3.png", width = 480, height = 480)
-plot(energydata$DateTime, energydata$Sub_metering_1, type = "l", col = "black", ylab = "Energy sub metering") 
+plot(energydata$DateTime, energydata$Sub_metering_1, type = "l", col = "black", ylab = "Energy sub metering", xlab = "Datetime") 
 lines(energydata$DateTime, energydata$Sub_metering_2, type = "l", col = "red")
 lines(energydata$DateTime, energydata$Sub_metering_3, type = "l", col = "blue")
 legend("topright", pch = 19, col = c("black", "red", "blue")  , legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))

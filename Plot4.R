@@ -27,12 +27,12 @@ energydata <- energydatafull %>%
 
 ##Plot 4 - Various parameters by DateTime
 png(filename = "Plot4.png", width = 480, height = 480)
-par(mfrow = c(2,2), mar = c(4,4,0,1), oma = c(0,0,2,0))
-plot(energydata$DateTime, energydata$Global_active_power, type = "l", ylab = "Global Active Power", xlab = "DateTime")
-plot(energydata$DateTime, energydata$Voltage, type = "l", ylab = "Voltage", xlab = "DateTime")
-plot(energydata$DateTime, energydata$Sub_metering_1, type = "l", col = "black", ylab = "Energy sub metering", xlab = "DateTime") 
-lines(energydata$DateTime, energydata$Sub_metering_2, type = "l", col = "red", xlab = "DateTime")
+par(mfrow = c(2,2), mar = c(4,4,2,1), oma = c(2,0,1,0))
+plot(energydata$DateTime, energydata$Global_active_power, type = "l", ylab = "Global Active Power", xlab = "Datetime")
+plot(energydata$DateTime, energydata$Voltage, type = "l", ylab = "Voltage", xlab = "Datetime")
+plot(energydata$DateTime, energydata$Sub_metering_1, type = "l", col = "black", ylab = "Energy sub metering", xlab = "Datetime") 
+lines(energydata$DateTime, energydata$Sub_metering_2, type = "l", col = "red", xlab = "Datetime")
 lines(energydata$DateTime, energydata$Sub_metering_3, type = "l", col = "blue")
 legend("topright", pch = 19, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
-plot(energydata$DateTime, energydata$Global_reactive_power, type = "l", ylab = "Global_reactive_Power", xlab = "DateTime")
+plot(energydata$DateTime, energydata$Global_reactive_power, type = "l", ylab = "Global_reactive_Power", xlab = "Datetime")
 dev.off()

@@ -27,5 +27,5 @@ energydata <- energydatafull %>%
 
 ##Plot 2 - Global active Power by DateTime
 png(filename = "Plot2.png", width = 480, height = 480)
-plot(energydata$DateTime, energydata$Global_active_power, type = "l", ylab = "Global Active Power (kilowatts)")
+plot(energydata$DateTime, energydata$Global_active_power, type = "l", ylab = "Global Active Power (kilowatts)", xlab = "Datetime")
 dev.off()
